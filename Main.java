@@ -18,10 +18,20 @@ class Main {
 
     Scanner scanner = new Scanner (System.in);
         
-        System.out.println("What is your name");
+        System.out.println("What is your name ? \n" );
         String name = scanner.nextLine();
 
-        System.out.println("My name is " + name);
+        System.out.printf(" \n Hello %s how old are You \n", name);
+        int age = scanner.nextInt();
+
+        //Clean the input buffer from nextInt() <enter key>
+        scanner.nextLine();
+
+        System.out.printf("\n %d Is a perfect age to start coding. What language You prefer \n", age);
+        String language = scanner.nextLine();
+
+        System.out.printf("\n %s Is very popular language", language);
+
 
         scanner.close();
     }
