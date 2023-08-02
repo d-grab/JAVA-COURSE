@@ -18,20 +18,32 @@ class Main {
 
     Scanner scanner = new Scanner (System.in);
         
-        System.out.println("What is your name ? \n" );
-        String name = scanner.nextLine();
-
-        System.out.printf(" \n Hello %s how old are You \n", name);
-        int age = scanner.nextInt();
-
-        //Clean the input buffer from nextInt() <enter key>
+        System.out.print("Enter first number ? \n" );
+        double number1 = scanner.nextDouble();
+        
+        scanner.nextLine();
+        System.out.print("Enter second number ? \n" );
+        double number2 = scanner.nextDouble();
         scanner.nextLine();
 
-        System.out.printf("\n %d Is a perfect age to start coding. What language You prefer \n", age);
-        String language = scanner.nextLine();
+        System.out.print("What operation you want to perform ? \n" );
+        String operation = scanner.nextLine();
 
-        System.out.printf("\n %s Is very popular language", language);
-
+        if(operation.equals("sum")) {
+            System.out.printf("%f + %f = %f", number1,number2,number1+number2);
+        }else if (operation.equals("sub")) {
+            System.out.printf("%f - %f = %f", number1,number2,number1-number2);}
+        else if (operation.equals("div")) {
+            if( number1==0){
+                System.out.printf("You cant divide by 0");
+            }else {
+                System.out.printf("%f / %f = %f", number1,number2,number1/number2);}
+            }
+            
+        else {
+            System.out.printf("%s Is not supported operation",operation);
+        }
+        
 
         scanner.close();
     }
