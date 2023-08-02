@@ -39,8 +39,10 @@ class Main {
             }else {
                 System.out.printf("%f / %f = %f", number1,number2,number1/number2);}
             }
+         else if (operation.equals("mul")){
+            System.out.printf("%f *  %f = %f", number1,number2,number1*number2);
             
-        else {
+        }else {
             System.out.printf("%s Is not supported operation",operation);
         }
         
